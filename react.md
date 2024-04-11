@@ -46,10 +46,11 @@ If you know the answer to this question, please submit a pull request with the a
 
 </details>
 
-_Waiting for response_
+In React function components, you can use variables and functions directly inside the component, but there are some nuances to be aware of due to the way React manages state and re-renders components.
 
+Variables: You can declare variables inside a function component and use them like you would in any other JavaScript function. However, if the value of a variable changes and you want the component to re-render with the new value, you should use the useState hook to manage state. This ensures that changes to the state trigger a re-render of the component.
 
-----
+Functions: Similarly, you can define functions inside a function component and use them within the component. However, if you need to pass a function to a child component or an event handler, it's recommended to use the useCallback hook to memoize the function, especially if the function relies on props or state.
 
 <details>
 <summary>What are React render props?</summary>
@@ -57,5 +58,4 @@ _Waiting for response_
 If you know the answer to this question, please submit a pull request with the answer.
 
 </details>
-
-_Waiting for response_
+In React, render props is a technique for sharing code between components using a prop whose value is a function. This allows components to share logic and state with other components in a flexible and reusable way.
